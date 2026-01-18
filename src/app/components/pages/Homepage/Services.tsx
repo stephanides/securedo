@@ -131,7 +131,7 @@ export const Services = () => {
           </div>
 
           {/* Background shapes */}
-          <div className="absolute inset-0 pointer-events-none slow-spin">
+          <div className="absolute inset-0 pointer-events-none slow-spin top-0 left-0">
             <Shape />
           </div>
 

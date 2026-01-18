@@ -51,7 +51,7 @@ export const Heading = () => {
           CHCEM CHRÁNIŤ MOJU FIRMU
         </PrimaryLink>
       </Container>
-      <div className="w-full max-w-[864px] absolute right-0 bottom-0">
+      <div className="w-full max-w-[864px] absolute right-0 top-20 sm:bottom-0 z-1">
         <Circles />
       </div>
 

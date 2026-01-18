@@ -45,7 +45,7 @@ const NavItem = ({
   </li>
 );
 
-const handleScrollToContent = ({
+export const handleScrollToContent = ({
   content,
   isHomePage,
 }: {

@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Container } from "../Container";
 import { LogoLarge } from "../icons";
@@ -5,6 +7,28 @@ import { Pin } from "../icons/Pin";
 import { Phone } from "../icons/Phone";
 import { EnvelopePrimary } from "../icons/EnvelopePrimary";
 import { ROUTES } from "@/app/constants";
+import { usePathname } from "next/navigation";
+import { handleScrollToContent } from "../Navigation";
+
+const NavItem = ({
+  href,
+  children,
+  onClick,
+}: {
+  href?: string;
+  children: React.ReactNode;
+  onClick?: () => void;
+}) => (
+  <li className="text-white cursor-pointer group">
+    {href ? (
+      <Link href={href} onClick={onClick}>
+        {children}
+      </Link>
+    ) : (
+      <span onClick={onClick}>{children}</span>
+    )}
+  </li>
+);
 
 const Item = ({
   icon,
@@ -28,6 +52,9 @@ const Item = ({
 
 export const Footer = () => {
   const year = new Date().getFullYear();
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
+
   return (
     <footer className="bg-primary-dark ">
       <Container>
@@ -37,10 +64,31 @@ export const Footer = () => {
               <LogoLarge />
             </div>
             <div className="self-stretch w-[1px] bg-primary" />
-            <div className="text-white flex flex-col gap-2 text-sm">
-              <Link href="/">Hlavná stránka</Link>
-              <Link href={ROUTES.CONTACT}>Kontakt</Link>
-            </div>
+            <ul className="text-white flex flex-col gap-1 text-sm list-none">
+              <NavItem href="/">Hlavná stránka</NavItem>
+              <NavItem
+                onClick={() =>
+                  handleScrollToContent({ content: "sluzby", isHomePage })
+                }
+              >
+                Služby
+              </NavItem>
+              <NavItem
+                onClick={() =>
+                  handleScrollToContent({ content: "nas-tim", isHomePage })
+                }
+              >
+                O nás
+              </NavItem>
+              <NavItem
+                onClick={() =>
+                  handleScrollToContent({ content: "faq", isHomePage })
+                }
+              >
+                Časté otázky
+              </NavItem>
+              <NavItem href={ROUTES.CONTACT}>Kontakt</NavItem>
+            </ul>
           </div>
           <Item
             icon={<Pin />}

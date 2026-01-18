@@ -89,10 +89,10 @@ export const ContactForm = () => {
         <div className="flex justify-center">
           <PrimaryButton
             type="submit"
-            className="mb-25 mt-8 uppercase cursor-pointer"
+            className="mb-25 mt-8 uppercase cursor-pointer group"
             textClassName="mr-20"
             icon={
-              <div className="w-[22px]">
+              <div className="w-[22px] group-hover:transform group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform">
                 <ArrowLink />
               </div>
             }

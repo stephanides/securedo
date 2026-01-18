@@ -140,8 +140,9 @@ export const Navigation = () => {
             <div className="hidden lg:block">
               <PrimaryLink
                 href={ROUTES.CONTACT}
+                className="group"
                 icon={
-                  <div className="w-5 text-black">
+                  <div className="w-5 text-black group-hover:transform group-hover:translate-x-1 transition-transform">
                     <Envelope />
                   </div>
                 }

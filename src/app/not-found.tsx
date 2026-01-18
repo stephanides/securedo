@@ -28,9 +28,9 @@ export default function NotFound() {
         </div>
         <PrimaryLink
           href={ROUTES.HOME}
-          className="mt-12 mx-auto"
+          className="mt-12 mx-auto group"
           icon={
-            <div className="w-[22px]">
+            <div className="w-[22px] group-hover:transform group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform">
               <ArrowLink />
             </div>
           }

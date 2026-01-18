@@ -41,9 +41,9 @@ export const Heading = () => {
         </ul>
         <PrimaryLink
           href={ROUTES.CONTACT}
-          className="mt-12 2xl:mt-18"
+          className="mt-12 2xl:mt-18 group"
           icon={
-            <div className="w-[22px]">
+            <div className="w-[22px] group-hover:transform group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform">
               <ArrowLink />
             </div>
           }

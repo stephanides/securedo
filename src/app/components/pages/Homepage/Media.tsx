@@ -117,9 +117,9 @@ export const Media = () => (
       </div>
       <PrimaryLink
         href={ROUTES.CONTACT}
-        className="mt-18 mx-auto"
+        className="mt-18 mx-auto group"
         icon={
-          <div className="w-[22px]">
+          <div className="w-[22px] group-hover:transform group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform">
             <ArrowLink />
           </div>
         }

@@ -1,5 +1,5 @@
 "use client";
-import { ROUTES } from "@/app/constants";
+
 import { ArrowLink } from "../../shared";
 import { PrimaryLink } from "../../shared/Button";
 import { Container } from "../../shared/Container";
@@ -105,8 +105,11 @@ export const Industries = () => {
           pôsobíte v týchto odvetviach:
         </p>
         <p className="text-base sm:text-xl 2xl:text-2xl text-center mt-8 block sm:hidden">
-          Ak ste firma nad 50 zamestnancov <span className="whitespace-nowrap">alebo 10 miliónov € obratu a</span> pôsobíte
-          v týchto odvetviach:
+          Ak ste firma nad 50 zamestnancov{" "}
+          <span className="whitespace-nowrap">
+            alebo 10 miliónov € obratu a
+          </span>{" "}
+          pôsobíte v týchto odvetviach:
         </p>
         <div className="hidden flex-col gap-6 mt-12 xl:flex">
           {chunkIndustries(industriesData, 4).map((row, rowIndex) => (
@@ -170,10 +173,12 @@ export const Industries = () => {
           máte povinnosť sa riadiť jeho požiadavkami.
         </p>
         <PrimaryLink
-          href={ROUTES.CONTACT}
-          className="mt-18 mx-auto"
+          href="https://nis2.nbu.gov.sk/indikativna-pomocka-na-urcenie-subjektu-ako-poskytovatela-zakladnej-sluzby/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-18 mx-auto group"
           icon={
-            <div className="w-[22px]">
+            <div className="w-[22px] group-hover:transform group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform">
               <ArrowLink />
             </div>
           }

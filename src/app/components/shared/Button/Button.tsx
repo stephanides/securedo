@@ -7,6 +7,7 @@ export const PrimaryLink = ({
   size = "small",
   className,
   textClassName,
+  onClick,
 }: {
   href: string;
   children: React.ReactNode;
@@ -14,9 +15,11 @@ export const PrimaryLink = ({
   size?: "small" | "large";
   className?: string;
   textClassName?: string;
+  onClick?: () => void;
 }) => (
   <Link
     href={href}
+    onClick={onClick}
     className={`bg-primary text-white font-medium flex items-center p-[5px] rounded-30 w-fit ${
       size === "large" ? "p-[10px]" : "p-[5px]"
     } ${className}`}

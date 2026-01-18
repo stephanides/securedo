@@ -222,6 +222,7 @@ export const Navigation = () => {
           <div className="mt-12">
             <PrimaryLink
               href={ROUTES.CONTACT}
+              onClick={() => setMobileOpen(false)}
               icon={
                 <div className="w-5 text-black">
                   <Envelope />

@@ -49,9 +49,9 @@ const Organization = ({
     <a href={url} className="group" target="_blank" rel="noreferrer">
       <div className={`${paddingClass}`}>
         <div className="flex items-center justify-between gap-3">
-          <h6 className="text-white text-xl xl:text-2xl tracking-minus-1 font-semibold">
+          <p className="text-white text-xl xl:text-2xl tracking-minus-1 font-semibold">
             {title}
-          </h6>
+          </p>
 
           <div className="bg-white rounded-full flex items-center justify-center w-[42px] h-[42px] sm:w-[50px] sm:h-[50px]">
             <div className="w-[22px] group-hover:transform group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform">

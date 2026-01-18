@@ -43,7 +43,7 @@ const Item = ({
     <div className="flex items-center gap-4 flex-col lg:flex-row text-center lg:text-left lg:items-start">
       <div className="flex-shrink-0">{icon}</div>
       <div className="flex-1">
-        <h4 className="text-base font-semibold text-white">{title}</h4>
+        <p className="text-base font-semibold text-white">{title}</p>
         <p className="text-sm text-white">{content}</p>
       </div>
     </div>

@@ -39,6 +39,9 @@ const Person = ({
         href={linkedIn}
         className="mt-5 justify-between flex lg:hidden group"
         textClassName="normal-case!"
+        target="_blank"
+        rel="noreferrer"
+        aria-label={`Pridajte si ${title} na LinkedIn`}
         icon={
           <div className="w-[22px] group-hover:transform group-hover:translate-x-1 transition-transform">
             <LinkedIn />
@@ -49,12 +52,12 @@ const Person = ({
       </SecondaryLink>
       <div className="px-0 sm:px-15 w-full mt-8 lg:mt-0">
         <div className="mt-2">
-          <h5 className="text-3xl xl:text-42 font-semibold tracking-minus-3 text-center lg:text-left">
+          <p className="text-3xl xl:text-42 font-semibold tracking-minus-3 text-center lg:text-left">
             {title}
-          </h5>
-          <h6 className="text-xl xl:text-2xl font-bold tracking-minus-3 text-center lg:text-left">
+          </p>
+          <p className="text-xl xl:text-2xl font-bold tracking-minus-3 text-center lg:text-left">
             {position}
-          </h6>
+          </p>
           {subtitle && (
             <p className="text-xl xl:text-2xl tracking-minus-3 mt-1 text-center lg:text-left">
               {subtitle}
@@ -126,12 +129,12 @@ export const OurTeam = () => (
               <span className="text-lg tracking-minus-1">Kto sme ?</span>
             </div>
             <div className="mt-2">
-              <h5 className="text-3xl xl:text-42 font-semibold tracking-minus-3 text-center lg:text-left">
+              <p className="text-3xl xl:text-42 font-semibold tracking-minus-3 text-center lg:text-left">
                 Ing. Peter Pištek, PhD.
-              </h5>
-              <h6 className="text-xl xl:text-2xl font-bold tracking-minus-3 text-center lg:text-left">
+              </p>
+              <p className="text-xl xl:text-2xl font-bold tracking-minus-3 text-center lg:text-left">
                 CISA, CISM, AAIA
-              </h6>
+              </p>
               <p className="text-xl xl:text-2xl tracking-minus-3 mt-1 text-center lg:text-left">
                 Certifikovaný audítor a manažér kybernetickej bezpečnosti
               </p>
@@ -149,9 +152,9 @@ export const OurTeam = () => (
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 h-auto sm:h-[148px] w-full rounded-30 overflow-hidden mt-9">
               <div className="flex flex-col justify-center items-center bg-primary-darker sm:bg-primary h-full px-6 min-h-[148px] sm:min-h-0">
-                <h6 className="text-3xl xl:text-[42px] text-white font-semibold tracking-minus-3">
+                <p className="text-3xl xl:text-[42px] text-white font-semibold tracking-minus-3">
                   15+
-                </h6>
+                </p>
                 <p className="text-sm xl:text-base text-center text-white uppercase">
                   rokov <br /> skúseností
                 </p>
@@ -163,18 +166,18 @@ export const OurTeam = () => (
                 </p>
               </div>
               <div className="flex flex-col justify-center items-center bg-primary h-full px-6 min-h-[148px]">
-                <h6 className="text-3xl xl:text-[42px] text-white tracking-minus-3 font-semibold">
+                <p className="text-3xl xl:text-[42px] text-white tracking-minus-3 font-semibold">
                   12
-                </h6>
+                </p>
                 <p className="text-sm xl:text-base text-center text-white uppercase">
                   rokov pedagóg{" "}
                   <span className="whitespace-nowrap">na stu</span>
                 </p>
               </div>
               <div className="flex flex-col justify-center items-center bg-primary-darker h-full px-6">
-                <h6 className="text-3xl xl:text-[42px] text-white tracking-minus-3 font-semibold">
+                <p className="text-3xl xl:text-[42px] text-white tracking-minus-3 font-semibold">
                   4
-                </h6>
+                </p>
                 <p className="text-sm xl:text-base text-center text-white uppercase">
                   roky výskum exkint
                 </p>
@@ -193,7 +196,7 @@ export const OurTeam = () => (
             "Je držiteľkou certifikácie M_o_R Foundation (Management of Risk).",
             "Klientom prináša praktické riešenia v reálnom prostredí výroby aj dodávateľských reťazcov.",
           ]}
-          linkedIn="/"
+          linkedIn="https://www.linkedin.com/in/tatiana-pongr%C3%A1cz-704561317/"
         />
         <Person
           photo="/jakub-kosik.jpg"
@@ -205,7 +208,7 @@ export const OurTeam = () => (
             "Má vedomosti o riadení bezpečnostných operácií, monitorovaní udalostí, reakcii na incidenty.",
             "Chápe základy súladu s reguláciami a riadenia rizík (GRC) pre podporu celkovej bezpečnostnej pozície organizácie.",
           ]}
-          linkedIn="/"
+          linkedIn="https://www.linkedin.com/in/jakub-kos%C3%ADk-5348352a8/"
         />
       </Container>
     </Element>

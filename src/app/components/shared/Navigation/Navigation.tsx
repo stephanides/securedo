@@ -100,7 +100,11 @@ export const Navigation = () => {
             }`}
           >
             {/* Logo */}
-            <Link href={ROUTES.HOME} onClick={() => setMobileOpen(false)}>
+            <Link
+              href={ROUTES.HOME}
+              onClick={() => setMobileOpen(false)}
+              aria-label="Domovská stránka"
+            >
               <div className="w-[140px] sm:w-[210px]">
                 {variant === "dark" && !scrolled ? <LogoLight /> : <LogoDark />}
               </div>

@@ -79,7 +79,7 @@ const Industry = ({ icon, name }: { icon: React.ReactNode; name: string }) => (
       {icon}
     </div>
 
-    <h6
+    <p
       className="
         text-lg font-semibold leading-[22px] tracking-minus-1
         text-black
@@ -89,7 +89,7 @@ const Industry = ({ icon, name }: { icon: React.ReactNode; name: string }) => (
       "
     >
       {name}
-    </h6>
+    </p>
   </div>
 );
 

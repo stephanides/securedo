@@ -46,6 +46,7 @@ export const SecondaryLink = ({
   size = "small",
   className,
   textClassName,
+  ...rest
 }: {
   href: string;
   children: React.ReactNode;
@@ -53,12 +54,13 @@ export const SecondaryLink = ({
   size?: "small" | "large";
   className?: string;
   textClassName?: string;
-}) => (
+} & React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
   <Link
     href={href}
     className={`bg-black text-white font-medium flex items-center p-[5px] rounded-30 w-fit ${
       size === "large" ? "p-[10px]" : "p-[5px]"
     } ${className}`}
+    {...rest}
   >
     <span
       className={`px-4 font-semibold uppercase no-underline ${textClassName}`}
@@ -66,7 +68,7 @@ export const SecondaryLink = ({
       {children}
     </span>
     {icon && (
-      <span className="ml-2 flex justify-center items-center bg-white p-[10px] rounded-full">
+      <span className="flex justify-center items-center bg-white p-[10px] rounded-full">
         {icon}
       </span>
     )}

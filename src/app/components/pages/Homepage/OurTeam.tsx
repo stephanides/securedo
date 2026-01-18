@@ -5,6 +5,7 @@ import { Container } from "../../shared/Container";
 import { SecondaryLink } from "../../shared/Button";
 import { LinkedIn } from "../../shared/icons/LinkedIn";
 import { Element } from "react-scroll";
+import { LINKEDINS } from "@/app/constants";
 
 const Person = ({
   photo,
@@ -36,10 +37,10 @@ const Person = ({
       </div>
       <SecondaryLink
         href={linkedIn}
-        className="mt-5 justify-between flex lg:hidden"
+        className="mt-5 justify-between flex lg:hidden group"
         textClassName="normal-case!"
         icon={
-          <div className="w-[22px]">
+          <div className="w-[22px] group-hover:transform group-hover:translate-x-1 transition-transform">
             <LinkedIn />
           </div>
         }
@@ -69,10 +70,10 @@ const Person = ({
     </div>
     <SecondaryLink
       href={linkedIn}
-      className="mt-5 justify-between hidden lg:flex"
+      className="mt-5 justify-between hidden lg:flex group"
       textClassName="normal-case!"
       icon={
-        <div className="w-[22px]">
+        <div className="w-[22px] group-hover:transform group-hover:translate-x-1 transition-transform">
           <LinkedIn />
         </div>
       }
@@ -106,11 +107,13 @@ export const OurTeam = () => (
               />
             </div>
             <SecondaryLink
-              href="/"
-              className="mt-8 w-full justify-between"
+              href={LINKEDINS.peter}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-8 w-full justify-between group"
               textClassName="normal-case!"
               icon={
-                <div className="w-[22px]">
+                <div className="w-[22px] group-hover:transform group-hover:translate-x-1 transition-transform">
                   <LinkedIn />
                 </div>
               }

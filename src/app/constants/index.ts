@@ -5,3 +5,7 @@ export const ROUTES = {
 };
 
 export const SEO_IMAGE = "/securedo_og_image.jpg";
+
+export const LINKEDINS = {
+  peter: "https://sk.linkedin.com/in/peterpistek"
+}

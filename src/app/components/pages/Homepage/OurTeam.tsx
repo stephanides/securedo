@@ -133,7 +133,7 @@ export const OurTeam = () => (
                 Ing. Peter Pištek, PhD.
               </p>
               <p className="text-xl xl:text-2xl font-bold tracking-minus-3 text-center lg:text-left">
-                CISA, CISM, AAIA
+                CISA, CISM, AAIA, AAISM
               </p>
               <p className="text-xl xl:text-2xl tracking-minus-3 mt-1 text-center lg:text-left">
                 Certifikovaný audítor a manažér kybernetickej bezpečnosti

@@ -55,10 +55,10 @@ const services: ServiceData[] = [
       "<strong>Výsledok:</strong> Zistíte, čo naozaj potrebujete riešiť na mieru pre vašu firmu.",
     ],
   },
-  {
-    title: "Pomoc pri automatizácii kybernetickej bezpečnosti",
-    descriptions: [],
-  },
+  // {
+  //   title: "Pomoc pri automatizácii kybernetickej bezpečnosti",
+  //   descriptions: [],
+  // },
 ];
 
 const Service = ({

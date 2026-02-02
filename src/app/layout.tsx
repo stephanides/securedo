@@ -85,6 +85,11 @@ export default function RootLayout({
             });
           `}
         </Script>
+        <Script
+          id="cookieyes"
+          strategy="afterInteractive"
+          src="https://cdn-cookieyes.com/client_data/5705417240905b4e1bc4c67f11665a49/script.js"
+        />
       </head>
       <body className={`${justSans.variable}`}>
         <Navigation />

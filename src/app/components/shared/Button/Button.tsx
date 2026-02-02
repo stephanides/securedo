@@ -93,7 +93,7 @@ export const PrimaryButton = ({
 } & React.ButtonHTMLAttributes<HTMLButtonElement>) => (
   <button
     onClick={onClick}
-    className={`bg-primary text-white font-medium flex items-center p-[5px] rounded-30 w-fit ${
+    className={`bg-primary text-white font-medium flex items-center p-[5px] rounded-30 w-fit disabled:opacity-50 ${
       size === "large" ? "p-[10px]" : "p-[5px]"
     } ${className}`}
     {...rest}

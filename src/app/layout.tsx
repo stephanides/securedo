@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { ToastContainer } from "react-toastify";
 import "./globals.css";
 import { Footer, Navigation } from "./components/shared";
 import { SEO_IMAGE } from "./constants";
+import Script from "next/script";
 
 const justSans = localFont({
   src: [
@@ -66,10 +68,29 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-7G94E0HV5H"
+          strategy="afterInteractive"
+        />
+
+        <Script id="ga-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-7G94E0HV5H', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
+      </head>
       <body className={`${justSans.variable}`}>
         <Navigation />
         {children}
         <Footer />
+        <ToastContainer />
       </body>
     </html>
   );

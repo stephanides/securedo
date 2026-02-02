@@ -75,18 +75,18 @@ export const Contact = () => {
                 <p className="text-lg">Lab 28 - Nivy Tower</p>
                 <p className="text-lg">Mlynské nivy 5, 82109 Bratislava</p>
                 <div className="mt-2">
-                  <span className="text-[13px]">
+                  <p className="text-[13px]">
                     Spoločnosť je zapísaná v Obchodnom registri Mestského súdu
                     Bratislava III, oddiel: Sro, vložka č. 175179/B. Konateľ:
                     Ing. Peter Pištek, PhD.
-                  </span>
-                  <span className="text-[13px] mt-2">
+                  </p>
+                  <p className="text-[13px] mt-2">
                     Partner verejného sektora, vložka č. 45243
-                  </span>
-                  <span className="text-[13px] mt-2">
+                  </p>
+                  <p className="text-[13px] mt-2">
                     Zoznam hospodárskych subjektov, registračné číslo:
                     2024/8-PO-G8422
-                  </span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -111,7 +111,7 @@ export const Contact = () => {
                 <h6 className="text-2xl font-semibold">Bankové spojenie</h6>
                 <p className="text-lg">IBAN: SK92 1100 0000 0029 4916 3374</p>
                 <p className="text-lg">Banka: Tatrabanka, a.s.</p>
-                <p className="text-lg">ISwift/BIC: TATRSKBX</p>
+                <p className="text-lg">Swift/BIC: TATRSKBX</p>
               </div>
             </div>
           </div>

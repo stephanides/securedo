@@ -34,17 +34,29 @@ const Item = ({
   icon,
   title,
   content,
+  type,
 }: {
   icon: React.ReactNode;
   title: string;
   content: React.ReactNode;
+  type: "phone" | "email" | "address";
 }) => {
   return (
     <div className="flex items-center gap-4 flex-col lg:flex-row text-center lg:text-left lg:items-start">
       <div className="flex-shrink-0">{icon}</div>
       <div className="flex-1">
         <p className="text-base font-semibold text-white">{title}</p>
-        <p className="text-sm text-white">{content}</p>
+        {type === "phone" && (
+          <a className="text-sm text-white" href={`tel:${content}`}>
+            {content}
+          </a>
+        )}
+        {type === "email" && (
+          <a className="text-sm text-white" href={`mailto:${content}`}>
+            {content}
+          </a>
+        )}
+        {type === "address" && <p className="text-sm text-white">{content}</p>}
       </div>
     </div>
   );
@@ -94,6 +106,7 @@ export const Footer = () => {
             icon={<Pin />}
             title="Sídlo spoločnosti:"
             content="Lenardova 1153/2, 85101 Bratislava"
+            type="address"
           />
           <Item
             icon={
@@ -103,11 +116,13 @@ export const Footer = () => {
             }
             title="Telefonický kontakt:"
             content="+421 908 511 475"
+            type="phone"
           />
           <Item
             icon={<EnvelopePrimary />}
             title="Email:"
             content="info@securedo.sk"
+            type="email"
           />
         </div>
       </Container>
